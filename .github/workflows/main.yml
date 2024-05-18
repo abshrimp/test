@@ -1,0 +1,38 @@
+name: 334Ranker
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        id: set
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+          
+      - name: Install Package
+        id: install
+        run: |
+          pip install chromedriver-binary-auto
+          pip install selenium
+      
+
+      - name: Run Python
+        id: python
+        run: python main.py
+
+      
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: out.csv
+          path: out.csv
