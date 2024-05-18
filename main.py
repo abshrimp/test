@@ -104,7 +104,7 @@ loop();
 """)
 y2 = 0
 x2 = 0
-while(time.time() - start < 3):
+while(time.time() - start < 19800):
   logs = driver.get_log("browser")
   for log in logs:
     print(log)
