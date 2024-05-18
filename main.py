@@ -120,6 +120,6 @@ while(time.time() - start < 19800):
       writer = csv.writer(file)
       writer.writerows(out)
   time.sleep(3)
-  if (y2 != y):
-      break
+  #if (y2 != y):
+      #break
 driver.quit()
