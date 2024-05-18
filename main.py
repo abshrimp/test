@@ -37,7 +37,7 @@ window.count2 = 0;
 window.x3 = 1723;
 window.y3 = 732;
 window.loop = async function() {
-    for (y3 = 732; y3 <= 732; y3++) {
+    for (y3 = 732; y3 <= 882; y3++) {
         for (x3 = 1723; x3 <= 1853; x3++) {
             await loop2(x3, y3)
         }
