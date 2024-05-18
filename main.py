@@ -14,7 +14,7 @@ options.add_argument('--disable-dev-shm-usage')
 options.add_argument("--no-sandbox")
 options.add_argument("--lang=ja")
 
-driver = gs.Chrome(options=options)
+driver = webdriver.Chrome(options=options)
 
 driver.get(URL)
 time.sleep(3)
