@@ -50,10 +50,11 @@ window.loop2 = async function(x, y) {
         xhr.onreadystatechange = async function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    var arr = xhr.responseText.split("\\n");
+                    var arr = xhr.responseText.split("\n");
                     let count = 0;
                     count2 = 0;
                     for (let i = 0; i < arr.length; i++) {
+                        if (arr[i] == "") continue;
                         arr[i] = arr[i].split(",");
                         for (let j = 0; j < arr[i].length; j++) {
                             if (arr[i][j] != "e") {
