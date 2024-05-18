@@ -58,7 +58,7 @@ window.loop2 = async function(x, y) {
                         arr[i] = arr[i].split(",");
                         for (let j = 0; j < arr[i].length; j++) {
                             if (arr[i][j] != "e") {
-                                let point = get2(x, y, zindex, i, j);
+                                let point = get2(x, y, zindex, j, i);
                                 setTimeout(function() {
                                     loop3(point);
                                 }, count * 3);
