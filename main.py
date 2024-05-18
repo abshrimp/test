@@ -35,7 +35,7 @@ window.out = [];
 window.out2 = [];
 window.count2 = 0;
 window.x3 = 1723;
-window.y3 = 743;
+window.y3 = 732;
 window.loop = async function() {
     for (y3 = 732; y3 <= 732; y3++) {
         for (x3 = 1723; x3 <= 1853; x3++) {
@@ -102,7 +102,7 @@ window.loop3 = function(point) {
 }
 loop();
 """)
-y2 = 0
+y2 = 732
 x2 = 0
 while(time.time() - start < 19800):
   logs = driver.get_log("browser")
@@ -113,12 +113,12 @@ while(time.time() - start < 19800):
   if (x2 != x):
     x2 = x
     print(str(x) + " " + str(y))
-  #if (y2 != y):
-    y2 = y
     out = driver.execute_script("return out")
     csv_path = r"out.csv"
     with open(csv_path, 'w', newline='') as file:
       writer = csv.writer(file)
       writer.writerows(out)
+  if (y2 != y):
+      break
   time.sleep(3)
 driver.quit()
