@@ -118,7 +118,7 @@ while(time.time() - start < 19800):
     with open(csv_path, 'w', newline='') as file:
       writer = csv.writer(file)
       writer.writerows(out)
+  time.sleep(3)
   if (y2 != y):
       break
-  time.sleep(3)
 driver.quit()
